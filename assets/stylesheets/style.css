@@ -1,0 +1,67 @@
+#main-nav {
+  display: block;
+  height: 32px;
+  background: black;
+}
+
+#sub-nav {
+  height: 48px;
+  background: grey;
+}
+
+#jumbo {
+  height: 70vh;
+  background: red;
+  margin-top: 35px;
+}
+
+#latest {
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) repeat(4, minmax(224px, 2.3fr)) minmax(
+      0,
+      1fr
+    );
+  grid-template-rows: auto repeat(2, minmax(224px, 1fr)) auto minmax(224px, 1fr);
+}
+#latest > * {
+  border: 1px solid black;
+}
+#left-side {
+  grid-column: 1/1;
+  grid-row: 1/-1;
+}
+#right-side {
+  grid-column: 6/6;
+  grid-row: 1/-1;
+}
+.news {
+  height: 227px;
+}
+#news-title {
+  grid-column: 2/6;
+  grid-row: 1/1;
+}
+#funding-title {
+  grid-row: 4/4;
+  grid-column: 2/6;
+}
+#ads {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) repeat(3, minmax(224px, 2.8fr)) minmax(
+      0,
+      1fr
+    );
+  grid-template-rows: repeat(3, minmax());
+}
+#ads-left-side {
+  grid-row: 1/-1;
+  grid-column: 1/1;
+}
+#ads-right-side {
+  grid-row: 1/-1;
+  grid-column: 1/1;
+}
+.subas {
+  background: red;
+}
