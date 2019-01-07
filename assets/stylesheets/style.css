@@ -10,49 +10,51 @@
 }
 
 #jumbo {
+  padding: 5px;
   height: 70vh;
   background: red;
   margin-top: 35px;
+  position: relative;
 }
 
 #latest {
-  padding-top: 24px;
+  margin-top: 5%;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) repeat(4, minmax(224px, 2.3fr)) minmax(
-      0,
-      1fr
-    );
+  grid-template-columns: repeat(4, minmax(224px, 1fr));
   grid-template-rows: auto repeat(2, minmax(224px, 1fr)) auto minmax(224px, 1fr);
+  margin: 0 auto;
+  max-width: 1125px;
+  min-width: 0px;
 }
-#latest > * {
-  border: 1px solid black;
-}
-#left-side {
+.left-side {
   grid-column: 1/1;
   grid-row: 1/-1;
 }
-#right-side {
+.right-side {
   grid-column: 6/6;
   grid-row: 1/-1;
 }
 .news {
-  height: 227px;
+  background: yellow;
+  margin: 5px;
 }
 #news-title {
-  grid-column: 2/6;
+  grid-column: 1/-1;
   grid-row: 1/1;
 }
 #funding-title {
+  padding-top: 5%;
   grid-row: 4/4;
-  grid-column: 2/6;
+  grid-column: 1/-1;
 }
 #ads {
+  margin-top: 5%;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) repeat(3, minmax(224px, 2.8fr)) minmax(
-      0,
-      1fr
-    );
-  grid-template-rows: repeat(3, minmax());
+  grid-template-columns:
+    minmax(0, 1fr)
+    repeat(3, minmax(306px, 2.8fr))
+    minmax(0, 1fr);
+  grid-template-rows: repeat(3, minmax(634px, 1fr));
 }
 #ads-left-side {
   grid-row: 1/-1;
@@ -60,8 +62,59 @@
 }
 #ads-right-side {
   grid-row: 1/-1;
-  grid-column: 1/1;
+  grid-column: 5/5;
 }
 .subas {
+  background: green;
+  margin: 5px;
+}
+#deals {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) repeat(4, minmax(224px, 2.1fr))
+    minmax(0, 1fr);
+  grid-template-rows: auto repeat(2, minmax(260px, 1fr));
+}
+.deals-title {
+  grid-column: 2/6;
+  grid-row: 1/1;
+}
+.deal {
+  margin: 5px;
   background: red;
+}
+#links {
+  margin-top: 3%;
+  height: 160px;
+  background: grey;
+}
+#copyright {
+  height: 100px;
+  background: darkgrey;
+}
+#jumbo1 {
+  float: left;
+  margin-right: 5px;
+  height: 100%;
+  width: 66.66666%;
+  background: goldenrod;
+  box-sizing: border-box;
+}
+.sub-jumo {
+  width: calc(33.3333333% - 5px);
+  height: calc(50% - 2.5px);
+  background: green;
+  position: absolute;
+  right: 0;
+}
+.jumbo2 {
+  top: 0;
+}
+.jumbo3 {
+  bottom: 0;
+}
+@media only screen and (max-width: 1006px) {
+  #jumbo {
+    height: 55vh;
+  }
 }
