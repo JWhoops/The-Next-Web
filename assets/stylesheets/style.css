@@ -1,3 +1,7 @@
+body {
+  font-family: "Staatliches", cursive;
+}
+
 header {
   background: #fff;
 }
@@ -5,14 +9,12 @@ header {
   display: block;
   height: 32px;
   background: black;
-  font-family: "Merriweather", serif;
 }
 
 #sub-nav {
   height: 48px;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
   display: relative;
-  font-family: "Merriweather", serif;
 }
 
 #jumbo {
@@ -20,6 +22,7 @@ header {
   margin-top: 35px;
   position: relative;
   padding-left: 10px;
+  font-family: none;
 }
 
 #latest {
@@ -41,16 +44,51 @@ header {
 }
 .news {
   height: 224px;
-  background: yellow;
   margin: 5px;
+  margin-left: 10px;
 }
-#news-title {
+
+.news-img {
+  background: url("../imgs/samourai-google-arm-twist-header-image-516x270.png");
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 66.6666%;
+}
+
+.news-title {
+  padding: 10px 0 5px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
+  font-size: 1.1em;
+}
+
+.news-author {
+  font-family: none;
+  color: darkgray;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+#latest-title {
   grid-column: 1/-1;
   grid-row: 1/1;
 }
+
+.or-title {
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  color: #f42;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
 #funding-title {
   padding-top: 5%;
   grid-column: 1/-1;
+  position: relative;
 }
 #ads {
   padding-top: 5%;
@@ -135,6 +173,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  font-family: "Merriweather" cursive;
 }
 
 #main-nav li {
@@ -190,13 +229,14 @@ img[src="assets/imgs/menu.svg"] {
   color: white;
   left: 15px;
   font-family: "Staatliches", cursive;
+  letter-spacing: 8px;
 }
 
 .jumbo-caption {
   position: absolute;
   bottom: 10px;
   left: 15px;
-  width: 100%;
+  width: 90%;
   color: white;
 }
 
@@ -233,9 +273,91 @@ img[src="assets/imgs/menu.svg"] {
   );
 }
 
+#funding-title ul {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+}
+
+#funding-title ul li {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 0.8em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.bar-only::after {
+  font-size: 0.9em;
+  vertical-align: text-top;
+  font-weight: 100;
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.found-news {
+  background: #fffaf8;
+  position: relative;
+}
+
+.founder {
+  height: 15%;
+  background: #f42;
+  line-height: 2.2em;
+  padding-left: 80px;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.money {
+  padding-left: 80px;
+  height: 25%;
+  background: rgba(255, 68, 34, 0.08);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.money h4 {
+  padding-top: 0.8em;
+}
+
+.money h5 {
+  color: grey;
+  margin-top: 2px;
+}
+
+.avatar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.tag {
+  color: rgb(80, 80, 80);
+  padding-left: 38px;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.fund-detail {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 68, 34, 0.25);
+  font-size: 0.85em;
+  padding-left: 15px;
+  padding-top: 1em;
+  padding-right: 5px;
+  letter-spacing: 1px;
+  color: rgb(100, 100, 100);
+
+}
+
 @media only screen and (max-width: 1006px) {
   #logo {
     display: block;
+    font-size: 3em;
   }
 
   #main-nav ul {
@@ -264,11 +386,18 @@ img[src="assets/imgs/menu.svg"] {
   }
 
   .jumbo-caption h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   #sub-jumbo-detail {
-    font-size: 2em;
+    font-size: 1.8em;
+  }
+
+  #funding-title ul {
+    font-size: 0.9em;
+    display: block;
+    position: static;
+    margin-top: 8px;
   }
 }
 
@@ -288,7 +417,7 @@ img[src="assets/imgs/menu.svg"] {
     display: block;
     position: relative;
     width: 100%;
-    height: 33.333333%;
+    height: calc(33.333333% - 10px);
   }
 
   #latest {
@@ -307,7 +436,6 @@ img[src="assets/imgs/menu.svg"] {
     width: 100%;
     min-height: 588.6px;
   }
-
   #main-nav {
     display: none;
   }
@@ -319,7 +447,7 @@ img[src="assets/imgs/menu.svg"] {
   #logo {
     height: 48px;
     line-height: 48px;
-    font-size: 1em;
+    font-size: 2em;
   }
 
   img[src="assets/imgs/magnifier.svg"] {
@@ -339,10 +467,55 @@ img[src="assets/imgs/menu.svg"] {
   }
 
   #sub-jumbo-detail {
-    font-size: 1.8em;
+    font-size: 1.7em;
   }
 
   #jumbo {
     margin-right: 10px;
+  }
+
+  .news {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 8px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .or-title {
+    padding-left: 5px;
+  }
+
+  .news {
+    width: 94%;
+    padding-right: 5px;
+  }
+
+  .news-img {
+    float: left;
+    width: 75px;
+    height: 75px;
+  }
+
+  .news-title {
+    margin-left: 90px;
+    font-size: 1em;
+    line-height: 1em;
+    padding-top: 0px;
+    font-weight: bold;
+  }
+
+  .news-author {
+    margin-left: 90px;
+  }
+
+  #funding-title ul li {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.72em;
+  }
+
+  .bar-only::after {
+    display: none;
   }
 }
