@@ -1,19 +1,25 @@
+header {
+  background: #fff;
+}
 #main-nav {
   display: block;
   height: 32px;
   background: black;
+  font-family: "Merriweather", serif;
 }
 
 #sub-nav {
   height: 48px;
-  background: grey;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+  display: relative;
+  font-family: "Merriweather", serif;
 }
 
 #jumbo {
   height: 70vh;
-  background: red;
   margin-top: 35px;
   position: relative;
+  padding-left: 10px;
 }
 
 #latest {
@@ -86,22 +92,160 @@
 #jumbo1 {
   float: left;
   height: 100%;
-  width: 66.66666%;
+  max-height: 100%;
+  width: calc(66.66666% - 10px);
   background: goldenrod;
   box-sizing: border-box;
+  background: url("../imgs/Sonarworks-True-FI-Mobile-796x392.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+}
+
+#jumbo3 {
+  background: url("../imgs/JBL-Link-Bar-796x406.jpg");
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 }
 .sub-jumo {
-  width: calc(33.3333333% - 5px);
+  width: calc(33.3333333% - 10px);
   height: calc(50% - 2.5px);
-  background: green;
   position: absolute;
-  right: 0;
+  right: 10px;
+  background: url("../imgs/LG-Signature-OLED-TV-R-Roll-up-Rollable-796x412.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  z-index: 3;
 }
-.jumbo3 {
-  bottom: 0;
+
+#logo {
+  display: none;
+  text-align: center;
+  background: linear-gradient(to bottom right, #c09, #f42 85%);
+  width: 106px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#main-nav li {
+  font-size: 0.8em;
+  float: left;
+  color: grey;
+  line-height: 32px;
+  margin-left: 10px;
+}
+
+#sub-nav li {
+  float: left;
+  color: darkgrey;
+  font-size: 0.9em;
+  line-height: 48px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+img[src="assets/imgs/magnifier.svg"] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 1%;
+  top: 45px;
+}
+
+img[src="assets/imgs/menu.svg"] {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
+#gradient-cover {
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 4;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3) 65%
+  );
+  background-size: cover;
+}
+
+#title {
+  width: 50%;
+  height: 25%;
+  font-size: 10em;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  color: white;
+  left: 15px;
+  font-family: "Staatliches", cursive;
+}
+
+.jumbo-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  width: 100%;
+  color: white;
+}
+
+.jumbo-caption h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.jumbo-caption h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(110, 110, 110);
+}
+
+.jumbo-caption h5 {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+#sub-jumbo-detail {
+  font-size: 2em;
+}
+
+.sub-cover {
+  z-index: 5;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.9) 80%
+  );
 }
 
 @media only screen and (max-width: 1006px) {
+  #logo {
+    display: block;
+  }
+
+  #main-nav ul {
+    margin-left: 118px;
+  }
+
+  #sub-nav ul {
+    margin-left: 118px;
+  }
+
   #jumbo {
     height: 55vh;
   }
@@ -114,12 +258,23 @@
   #ads {
     grid-template-columns: repeat(2, minmax(346px, 1fr));
   }
+
+  #title {
+    display: none;
+  }
+
+  .jumbo-caption h1 {
+    font-size: 2em;
+  }
+
+  #sub-jumbo-detail {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (max-width: 751px) {
   #jumbo {
     height: 100vh;
-    background: black;
   }
   #jumbo1 {
     width: 100%;
@@ -128,8 +283,10 @@
   }
 
   .sub-jumo {
+    margin-top: 10px;
+    margin-left: 10px;
     display: block;
-    position: static;
+    position: relative;
     width: 100%;
     height: 33.333333%;
   }
@@ -148,6 +305,44 @@
 
   .subas {
     width: 100%;
-    min-height: 608.1;
+    min-height: 588.6px;
+  }
+
+  #main-nav {
+    display: none;
+  }
+
+  #sub-nav ul {
+    display: none;
+  }
+
+  #logo {
+    height: 48px;
+    line-height: 48px;
+    font-size: 1em;
+  }
+
+  img[src="assets/imgs/magnifier.svg"] {
+    top: 2%;
+    right: 44px;
+  }
+
+  img[src="assets/imgs/menu.svg"] {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 2%;
+  }
+
+  .jumbo-caption h1 {
+    font-size: 1.8em;
+  }
+
+  #sub-jumbo-detail {
+    font-size: 1.8em;
+  }
+
+  #jumbo {
+    margin-right: 10px;
   }
 }
